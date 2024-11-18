@@ -13,6 +13,7 @@
 
 .header__icon-menu {
     cursor: pointer;
+    position: absolute;
 }
 
 .header__logo {
@@ -44,13 +45,165 @@
     cursor: pointer;
 }
 
+.container {
+    padding-inline: 15px;
+}
 
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: color-mix(in lch, var(--c-grey-03) 10%, var(--c-white) 90%);
+}
 
+.navigation__pages {
+    display: flex;
+    gap: 10px;
+    font-family: var(--f-mod);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    padding-block: 16px;
+    cursor: pointer;
+}
 
+.navigation__page-main {
+    color: var(--c-grey-03);
+}
 
+.navigation__page-current {
+    color: color-mix(in lch, var(--c-grey-03) 70%, var(--c-white) 30%);
+}
 
+.navigation__page {
+    width: 100%;
+    text-align: center;
+    font-family: var(--f-btn);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: var(--c-grey-01);
+    padding-block: 20px;
+    border-top: 1px solid var(--c-grey-05);
+}
 
+.info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
 
+.info-block__number {
+    max-width: max-content;
+    font-family: var(--f-btn);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: -14px;
+}
+
+.info-block__company {
+    font-family: var(--f-mod);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.info-block__details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--f-mod);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--c-grey-06);
+}
+
+.info-block__detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback {
+    margin-bottom: 50px;
+}
+
+.feedback__top {
+    font-family: var(--f-btn);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--c-black-03);
+    text-transform: uppercase;
+}
+
+.feedback__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.feedback__form-field {
+    padding: 17px 20px;
+    border: transparent;
+    background-color: var(--c-grey-07);
+    border-radius: var(--b-radius-sm);
+    font-family: var(--f-mod);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    &:focus {
+        border: 1px solid var(--c-red-hover);
+    }
+
+    &--comment {
+        height: 166px;
+        overflow: auto;
+
+        &::placeholder {
+            position: absolute;
+            top: 17px;
+        }
+    }
+}
+
+.feedback__accord {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.feedback__btn {
+    max-width: 190px;
+    background-color: var(--c-red-01);
+    color: var(--c-white);
+    border-radius: var(--b-radius-sm);
+    text-align: center;
+    padding: 19px 36px;
+    font-family: var(--f-btn);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 15px;
+    transition: all 0.35s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--c-red-hover);
+    }
+}
 
 .footer__top {
     background-color: var(--c-black-01);
@@ -68,7 +221,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 34px;
-    transition: all 0,2s ease-in-out;
+    transition: all 0.35s ease-in-out;
     cursor: pointer;
 
     &:hover {
@@ -90,7 +243,7 @@
     font-size: 16px;
     line-height: 29px;
     color: var(--c-grey-03);
-    transition: all 0,2s ease-in-out;
+    transition: all 0.35s ease-in-out;
     cursor: pointer;
 
     &:hover {
@@ -109,12 +262,13 @@
 }
 
 .footer__number {
+    max-width: max-content;
     font-family: var(--f-mod);
     cursor: pointer;
     font-weight: 400;
     font-size: 23px;
     line-height: 34px;
-    transition: all 0,2s ease-in-out;
+    transition: all 0.35s ease-in-out;
     cursor: pointer;
 
     &:hover {
@@ -135,7 +289,7 @@
     font-size: 14px;
     line-height: 14px;
     margin-bottom: 15px;
-    transition: all 0,2s ease-in-out;
+    transition: all 0.35s ease-in-out;
     cursor: pointer;
 
     &:hover {
@@ -143,14 +297,18 @@
     }
 }
 
-.footer__mail {
+.mail {
     font-family: var(--f-mod);
     font-weight: 500;
     font-size: 19px;
     line-height: 21px;
     color: var(--c-red-01);
-    margin-bottom: 42px;
     cursor: pointer;
+
+    &--body {
+        font-size: 25px;
+        line-height: 30px;
+    }
 }
 
 .footer__address {
@@ -158,6 +316,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
+    margin-top: 42px;
     margin-bottom: 10px;
 }
 

@@ -7,16 +7,20 @@
     --f-mod: "Golos Text", sans-serif;
     --f-btn: "Montserrat", sans-serif;
     --c-red-01: #BF2738;
-    --c-red-hover: #BF2738;
+    --c-red-hover: rgba(153, 31, 45, 1);
     --c-red-links: #BF2738;
     --c-grey-01: #262633;
     --c-grey-02: #262633;
     --c-grey-03: rgba(121, 121, 134, 1);
     --c-grey-04: rgba(64, 64, 64, 1);
+    --c-grey-05: color-mix(in lch, var(--c-grey-03) 40%, var(--c-white) 60%);
+    --c-grey-06: rgba(128, 128, 128, 1);
+    --c-grey-07: rgba(245, 245, 245, 1);
     --c-line: #262633;
     --c-white: #fff;
     --c-black-01: rgba(34, 34, 37, 1);
     --c-black-02: rgba(42, 42, 46, 1);
+    --c-black-03: rgba(33, 33, 33, 1);
     --b-radius-sm: 14px;
     --b-radius: 30px;
 }
