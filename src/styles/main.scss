@@ -257,11 +257,74 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 60px;
+} 
+
+.card {
     background-color: var(--c-grey-07);
     margin-inline: 15px;
-    padding: 40px 12px;
+    padding: 33px 12px;
     border-radius: var(--b-radius-card);
-} 
+}
+
+.card__title {
+    font-family: var(--f-btn);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 28px;
+    color: var(--c-black-01);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.card__numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.card__number {
+    color: var(--c-black-01);
+    font-family: var(--f-body);
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+}
+
+.card__address {
+    font-family: var(--f-body);
+    color: var(--c-grey-06);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.card__btn {
+    font-family: var(--f-body);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--c-red-01);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: unset;
+
+    &:hover {
+        color: var(--c-red-hover);
+    }
+}
+
+.card__working-hours {
+    font-family: var(--f-body);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--c-black-01);
+    margin-top: 20px;
+    margin-bottom: 7px;
+}
 
 .footer__top {
     background-color: var(--c-black-01);
